@@ -1,10 +1,13 @@
-from datetime import datetime
+# src/main.py
 
-now = datetime.now()
+import datetime
 
-current_time = now.strftime("%Y-%m-%d %H:%M:%S")
+# Get the current date and time in the desired format
+current_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-with open("../version.md", "w") as file:
-    file.write(f"Last updated: {current_time}\n")
+# Specify the file path for version.md
+file_path = 'version.md'
 
-print(f"Current time written to version.md: {current_time}")
+# Write the current date and time to the file
+with open(file_path, 'w') as f:
+    f.write(f'Current Date and Time: {current_datetime}\n')
